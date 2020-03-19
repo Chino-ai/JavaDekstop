@@ -1,0 +1,53 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ComboBox?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <Label text="IP Netowork Kalkulator" textFill="blueviolet" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <Label text="Masukan IP Address" />
+        <TextField fx:id="tfIP1" promptText="Masukan IP adddress" focusTraversable="false"/>
+        <TextField fx:id="tfIP2" promptText="Masukan IP adddress" focusTraversable="false"/>
+        <TextField fx:id="tfIP3" promptText="Masukan IP adddress" focusTraversable="false"/>
+        <TextField fx:id="tfIP4" promptText="Masukan IP adddress" focusTraversable="false"/>
+        <Button  fx:id="btnHitung" text="Hitung" alignment="CENTER" onAction="#onButtonClicked" />
+
+    </VBox>
+
+    <HBox GridPane.rowIndex="2" GridPane.columnIndex="0" >
+        <Label text="Pilih No CIDR"/>
+
+<!--        <ComboBox fx:id="tfSubnet" focusTraversable="false"  promptText="CIDR" />-->
+        <TextField fx:id="tfSubnet" focusTraversable="false" promptText="CIDR"/>
+
+    </HBox>
+
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="3">
+        <Label text="SubnetMask"/>
+        <TextField fx:id="tfSubnetMask" focusTraversable="false" promptText="Subnet Mask"/>
+
+    </VBox>
+
+    <VBox GridPane.rowIndex="4" GridPane.columnIndex="0">
+        <Label text="Address Range" />
+        <TextField fx:id="tfAddressRange" promptText="Address Range" focusTraversable="false"/>
+        <Label text="IP Network" />
+        <TextField fx:id="ipNetwork" promptText="Network" focusTraversable="false"/>
+
+        <Label text="IP Binary"/>
+
+        <TextField fx:id="tfIpBinary" promptText="IP Binary" focusTraversable="false"/>
+        <Label text="IP Binary Netmask" />
+        <TextField fx:id="tfBinaryNetmask" promptText="IP Binary Netmask" focusTraversable="false"/>
+
+
+
+    </VBox>
+
+</GridPane>
