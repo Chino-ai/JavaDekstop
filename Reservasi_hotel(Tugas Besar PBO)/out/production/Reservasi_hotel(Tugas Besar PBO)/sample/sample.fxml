@@ -1,0 +1,221 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javax.swing.*?>
+
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+   <HBox GridPane.columnIndex="0" GridPane.rowIndex="0" >
+       <Label text="Reservasi Hotel"/>
+   </HBox>
+
+
+
+    <HBox GridPane.rowIndex="1" GridPane.columnIndex="0" spacing="60">
+        <Label text="ID"/>
+        <TextField fx:id="txt_id_co"/>
+    </HBox>
+<HBox GridPane.rowIndex="2" GridPane.columnIndex="0" spacing="40">
+    <Label text="Nama"/>
+    <TextField fx:id="txt_nama"/>
+</HBox>
+
+    <HBox GridPane.rowIndex="3" GridPane.columnIndex="0" spacing="5" maxWidth="10">
+        <Label text="Jenis Kelamin"/>
+<!--        <TextField fx:id="txt_kelamin"/>-->
+        <RadioButton fx:id="txt_kelamin2" text="L" />
+        <RadioButton fx:id="txt_kelamin3" text="P"/>
+
+    </HBox>
+
+    <HBox GridPane.rowIndex="4" GridPane.columnIndex="0" spacing="50">
+        <Label text="Email"/>
+        <TextField fx:id="txt_email"/>
+    </HBox>
+
+    <HBox GridPane.rowIndex="5" GridPane.columnIndex="0" spacing="5">
+        <Label text="Nomer Kontak"/>
+        <TextField fx:id="txt_no_kontak"/>
+    </HBox>
+
+
+        <HBox GridPane.rowIndex="6" GridPane.columnIndex="0" spacing="30">
+            <Label text="Tanggal Reservasi"/>
+
+
+        </HBox>
+
+        <HBox GridPane.rowIndex="7" GridPane.columnIndex="0" spacing="30">
+            <Label text="Check-in"/>
+            <TextField fx:id="txt_check_In1"  focusTraversable="false"/>
+            <Label text="/"/>
+            <TextField fx:id="txt_check_In2"  focusTraversable="false"/>
+            <Label text="/"/>
+            <TextField fx:id="txt_check_In3"  focusTraversable="false"/>
+        </HBox>
+
+        <HBox GridPane.rowIndex="8" GridPane.columnIndex="0" spacing="20">
+            <Label text="Check-out"/>
+            <TextField fx:id="txt_check_out"/>
+        </HBox>
+
+        <HBox GridPane.rowIndex="9" GridPane.columnIndex="0" spacing="10">
+            <Label text="Kelas Kamar"/>
+<!--        <TextField fx:id="txt_kamar"/>-->
+            <ChoiceBox fx:id="txt_kamar" onAction="#btnAction"/>
+
+<!--            <ChoiceBox fx:id="txt_kamar2"/>-->
+        </HBox>
+
+    <HBox GridPane.columnIndex="10" GridPane.rowIndex="10" spacing="20">
+        <Label text="Pembayaran"/>
+        <TextField fx:id="txt_bayar"/>
+
+
+    </HBox>
+
+    <HBox  GridPane.rowIndex="11" GridPane.columnIndex="0" spacing="20">
+        <Button fx:id="btn_simpan" text="Simpan" onAction="#btnAction" />
+        <Button fx:id="btn_reset" text="Reset"  onAction="#btnAction"  />
+        <Button fx:id="btn_ubah" text="Ubah" onAction="#btnAction"  />
+        <Button fx:id="btn_hapus" text="hapus" onAction="#btnAction"  />
+        <Button fx:id="btn_keluar" text="Keluar" onAction="#btnAction"  />
+        <Button fx:id="btn_lihatData" text="Lihat Data" onAction="#btnAction" />
+
+    </HBox>
+
+    <TableView fx:id="tabel_customer" GridPane.columnIndex="0" GridPane.rowIndex="12" >
+    <columns>
+    <TableColumn text="Id_co">
+        <cellValueFactory >
+            <PropertyValueFactory property="id_co"/>
+
+        </cellValueFactory>
+    </TableColumn>
+
+    </columns>
+
+        <columns>
+            <TableColumn text="Nama">
+                <cellValueFactory >
+                    <PropertyValueFactory property="nama"/>
+
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+
+        <columns>
+            <TableColumn text="Kelamin">
+                <cellValueFactory >
+                    <PropertyValueFactory property="kel"/>
+
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+
+        <columns>
+            <TableColumn text="Email">
+                <cellValueFactory >
+                    <PropertyValueFactory property="email"/>
+
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+
+        <columns>
+            <TableColumn text="Nomer_KontaK">
+                <cellValueFactory >
+                    <PropertyValueFactory property="nomer_kontak"/>
+
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+
+        <columns>
+            <TableColumn text="ChechkIn">
+                <cellValueFactory >
+                    <PropertyValueFactory property="tgl_ci"/>
+
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+
+        <columns>
+            <TableColumn text="CheckOut">
+                <cellValueFactory >
+                    <PropertyValueFactory property="tgl_co"/>
+
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+
+
+
+        <columns>
+            <TableColumn text="Kode_kamar">
+                <cellValueFactory >
+                    <PropertyValueFactory property="id_kamar"/>
+
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+
+
+
+        <columns>
+            <TableColumn text="Kelas">
+                <cellValueFactory >
+                    <PropertyValueFactory property="kelas"/>
+
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+
+        <columns>
+            <TableColumn text="Tarif">
+                <cellValueFactory >
+                    <PropertyValueFactory property="Tarif"/>
+
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+
+        <columns>
+            <TableColumn text="Status_bayar">
+                <cellValueFactory >
+                    <PropertyValueFactory property="harga"/>
+
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+
+
+    </TableView>
+
+
+
+
+
+
+
+
+
+
+</GridPane>
+
