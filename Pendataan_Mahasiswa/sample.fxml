@@ -1,0 +1,62 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<GridPane fx:controller="Pendataan_Mahasiswa.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <Label text="Pendataan Mahasiswa" textFill="blueviolet" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <Label text="NIM"/>
+        <TextField fx:id="tfNIM" focusTraversable="false"
+                   promptText="Masukan NIM"/>
+
+    </VBox>
+
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="2">
+    <Label text="Nama"/>
+    <TextField fx:id="tfNama" focusTraversable="false"
+               promptText="Masukan Nama"/>
+    </VBox>
+
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="3">
+    <Label text="Alamat"/>
+    <TextField fx:id="tfAlamat" focusTraversable="false"
+               promptText="Masukan Alamat"/>
+    </VBox>
+
+    <Button fx:id="btnSubmit" text="Submit" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="4"
+    onAction="#onButtonClicked"/>
+
+    <TableView fx:id="tvDataMahasiswa" GridPane.columnIndex="0" GridPane.rowIndex="7" maxHeight="150">
+        <columns>
+            <TableColumn text="NIM">
+                <cellValueFactory>
+                    <PropertyValueFactory property="nim"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Nama" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="nama"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Alamat" prefWidth="200">
+                <cellValueFactory>
+                    <PropertyValueFactory property="alamat"/>
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+    </TableView>
+
+    <HBox GridPane.columnIndex="0" GridPane.rowIndex="8" spacing="20">
+        <Button fx:id="btnSave" text="Save Data to file" textAlignment="CENTER" onAction="#onButtonClicked"/>
+        <Button fx:id="btnLoad" text="Load data from file" textAlignment="CENTER" onAction="#onButtonClicked"/>
+
+
+    </HBox>
+
+</GridPane>
